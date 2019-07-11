@@ -5,19 +5,22 @@
 - cordova-plugin-file : **文件操作**
 - cordova-plugin-camera : **相机操作**
 - cordova-plugin-file-transfer : **文件操作**
+- cordova-plugin-media : **媒体操作**
 
 ## 文件结构解释
 
-- www   *主文件夹*
+- www
   - index   *首页*
   - logo.png   *图标*
   - src   *功能文件夹*
     - camera   *相机*
-      - index   *相机功能页*
+      - index
     - file   *文件*
-      - index   *文件功能页*
+      - index
     - storage   *存储*
-      - index   *存储功能页*
+      - index
+    - media   *媒体*
+      - index
 
 ## [License](License)
 
