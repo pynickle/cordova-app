@@ -8,6 +8,7 @@
 - cordova-plugin-media : **媒体操作**
 - cordova-plugin-battery-status : **电池操作**
 - cordova-plugin-inappbrowser : **网页操作**
+- cordova-plugin-device : **设备操作**
 
 ## 文件结构解释
 
@@ -16,32 +17,35 @@
   - logo.png   *图标*
   - src   *功能文件夹*
     - camera   *相机*
-      - index
     - file   *文件*
-      - index
     - storage   *存储*
-      - index
     - media   *媒体*
-      - index
     - battery   *电池*
-      - index
     - browser   *网页*
-      - index 
+    - device   *设备*
 
 ## 测试
 
 build这个项目：
 
-```bash
+```
 npm test
+// equal to
+cordova build android
 ```
 
 run这个项目：
 
-```bash
-npm start
 ```
+npm start
+// equal to
+cordova run android
+```
+
+## 平台
+
+**Android**
 
 ## [License](License)
 
-MIT License
+**MIT License**
