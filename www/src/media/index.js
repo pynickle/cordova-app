@@ -22,13 +22,13 @@ app.initialize();
 document.getElementById("playMedia").addEventListener("click", playMedia);
 
 function playMedia() {
-    var url = "https://pynickle.github.io/card/a-little-story.mp3";
+    var url = "https://www.runoob.com/try/demo_source/horse.mp3";
     var media = new Media(url,
         function () {
-            console.log("playAudio():Audio Success");
+            alert("playAudio():Audio Success");
         },
         function (err) {
-            console.log("playAudio():Audio Error: " + err);
+            alert("playAudio():Audio Error: " + err);
         }
     );
     media.play();
