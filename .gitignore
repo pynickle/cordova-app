@@ -3,4 +3,5 @@ platforms/
 plugins/
 hooks/
 package-lock.json
+typings/
 !*.apk
