@@ -26,13 +26,17 @@ document.getElementById("removeFile").addEventListener("click", removeFile);
 document.getElementById("downloadFile").addEventListener("click", downloadFile);
 
 function createFile() {
+    var filename = document.getElementById("fileName").value
+    if(!filename) {
+        filename = "log.txt"
+    }
     var type = window.TEMPORARY;
     var size = 5 * 1024 * 1024;
 
     window.requestFileSystem(type, size, successCallback, errorCallback)
 
     function successCallback(fs) {
-        fs.root.getFile('log.txt', {
+        fs.root.getFile(filename, {
             create: true,
             exclusive: true
         }, function (fileEntry) {
@@ -47,6 +51,10 @@ function createFile() {
 }
 
 function writeFile() {
+    var filename = document.getElementById("fileName").value
+    if(!filename) {
+        filename = "log.txt"
+    }
     var type = window.TEMPORARY;
     var size = 5 * 1024 * 1024;
 
@@ -54,7 +62,7 @@ function writeFile() {
 
     function successCallback(fs) {
 
-        fs.root.getFile('log.txt', {
+        fs.root.getFile(filename, {
             create: true
         }, function (fileEntry) {
 
@@ -84,6 +92,10 @@ function writeFile() {
 }
 
 function readFile() {
+    var filename = document.getElementById("fileName").value
+    if(!filename) {
+        filename = "log.txt"
+    }
     var type = window.TEMPORARY;
     var size = 5 * 1024 * 1024;
 
@@ -91,7 +103,7 @@ function readFile() {
 
     function successCallback(fs) {
 
-        fs.root.getFile('log.txt', {}, function (fileEntry) {
+        fs.root.getFile(filename, {}, function (fileEntry) {
 
             fileEntry.file(function (file) {
                 var reader = new FileReader();
@@ -115,13 +127,17 @@ function readFile() {
 }
 
 function removeFile() {
+    var filename = document.getElementById("fileName").value
+    if(!filename) {
+        filename = "log.txt"
+    }
     var type = window.TEMPORARY;
     var size = 5 * 1024 * 1024;
 
     window.requestFileSystem(type, size, successCallback, errorCallback)
 
     function successCallback(fs) {
-        fs.root.getFile('log.txt', {
+        fs.root.getFile(filename, {
             create: false
         }, function (fileEntry) {
 
@@ -142,7 +158,7 @@ function downloadFile() {
 
     var fileTransfer = new FileTransfer();
     var uri = encodeURI("http://s14.postimg.org/i8qvaxyup/bitcoin1.jpg");
-    var fileURL = "///storage/emulated/0/DCIM/myFile";
+    var fileURL = "///storage/emulated/0/DCIM";
 
     fileTransfer.download(
         uri, fileURL,

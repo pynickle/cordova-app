@@ -23,8 +23,12 @@ document.getElementById("cameraTakePicture").addEventListener("click", cameraTak
 document.getElementById("cameraGetPicture").addEventListener("click", cameraGetPicture);
 
 function cameraTakePicture() {
+    var quality = document.getElementById("qualityPlace").value
+    if(!quality) {
+        quality = 75
+    }
     navigator.camera.getPicture(onSuccess, onFail, {
-        quality: 80,
+        quality: quality,
         destinationType: Camera.DestinationType.DATA_URL,
         allowEdit: true,
         encodingType: Camera.EncodingType.PNG,
@@ -41,8 +45,12 @@ function cameraTakePicture() {
 }
 
 function cameraGetPicture() {
+    var quality = document.getElementById("qualityPlace").value
+    if(!quality) {
+        quality = 75
+    }
     navigator.camera.getPicture(onSuccess, onFail, {
-        quality: 50,
+        quality: quality,
         destinationType: Camera.DestinationType.DATA_URL,
         sourceType: Camera.PictureSourceType.PHOTOLIBRARY
     });

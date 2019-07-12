@@ -7,6 +7,7 @@
 - cordova-plugin-file-transfer : **文件操作**
 - cordova-plugin-media : **媒体操作**
 - cordova-plugin-battery-status : **电池操作**
+- cordova-plugin-inappbrowser : **网页操作**
 
 ## 文件结构解释
 
@@ -24,6 +25,22 @@
       - index
     - battery   *电池*
       - index
+    - browser   *网页*
+      - index 
+
+## 测试
+
+build这个项目：
+
+```bash
+npm test
+```
+
+run这个项目：
+
+```bash
+npm start
+```
 
 ## [License](License)
 

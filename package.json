@@ -1,12 +1,16 @@
 {
     "name": "io.cordova.hellocordova",
-    "displayName": "CordovaApp",
+    "displayName": "魔法宝箱",
     "version": "0.0.1",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "description": "一个使用Cordova制作的小工具集",
     "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pynickle/cordova-app.git"
+    },
     "scripts": {
-        "start": "cordova build android",
-        "test": "cordova run android"
+        "start": "cordova run android",
+        "test": "cordova build android"
     },
     "keywords": [
         "tools",
@@ -32,8 +36,9 @@
             "cordova-plugin-camera": {},
             "cordova-plugin-file-transfer": {},
             "cordova-plugin-media": {},
-            "cordova-plugin-battery-status": {},
-            "cordova-plugin-inappbrowser": {}
+            "cordova-plugin-inappbrowser": {},
+            "com.blueshift.cordova.battery": {},
+            "cordova-plugin-battery-status": {}
         },
         "platforms": [
             "android"

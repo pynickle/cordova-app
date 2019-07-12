@@ -5,6 +5,8 @@ var app = {
     onDeviceReady: function () {
         this.receivedEvent('deviceready');
         window.addEventListener("batterystatus", batteryStatus, false);
+        window.addEventListener("batterycritical", batteryCritical, false)
+        window.addEventListener("batterylow", batteryLow, false)
     },
     receivedEvent: function (id) {
         var parentElement = document.getElementById(id);
@@ -21,5 +23,13 @@ var app = {
 app.initialize();
 
 function batteryStatus(status) {
-    alert("目前电量：" + status.level + "，充电状态：" + status.isPlugged)
+    alert("当前电量：" + status.level + "，充电状态" + status.isPlugged);
+}
+
+function batteryCritical(status) {
+    alert("阈值：" + status.level);
+}
+
+function batteryLow(status) {
+    alert("电量低：" + status.level);
 }

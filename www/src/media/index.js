@@ -1,3 +1,5 @@
+import { file } from "../../../plugins/cordova-plugin-file/www/fileSystemPaths";
+
 var app = {
     initialize: function () {
         document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
@@ -36,8 +38,11 @@ function playMedia() {
 }
 
 function recordMedia() {
-    var src = "record.mp3";
-    var media = new Media(src,
+    var filename = document.getElementById("fileName").value
+    if(!filename) {
+        filename = "record.mp3"
+    }
+    var media = new Media(filename,
         function () {
             alert("开始录制");
         },
