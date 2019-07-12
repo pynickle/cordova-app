@@ -6,6 +6,7 @@
 - cordova-plugin-camera : **相机操作**
 - cordova-plugin-file-transfer : **文件操作**
 - cordova-plugin-media : **媒体操作**
+- cordova-plugin-battery-status : **电池操作**
 
 ## 文件结构解释
 
@@ -20,6 +21,8 @@
     - storage   *存储*
       - index
     - media   *媒体*
+      - index
+    - battery   *电池*
       - index
 
 ## [License](License)

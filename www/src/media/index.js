@@ -22,14 +22,6 @@ app.initialize();
 document.getElementById("playMedia").addEventListener("click", playMedia);
 document.getElementById("recordMedia").addEventListener("click", recordMedia)
 
-
-function sleep(delay) {
-    var start = (new Date()).getTime();
-    while ((new Date()).getTime() - start < delay) {
-        continue;
-    }
-}
-
 function playMedia() {
     var url="https://www.runoob.com/try/demo_source/horse.mp3";
     var media = new Media(url,
