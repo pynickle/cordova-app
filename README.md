@@ -9,6 +9,7 @@
 - cordova-plugin-battery-status : **电池操作**
 - cordova-plugin-inappbrowser : **网页操作**
 - cordova-plugin-device : **设备操作**
+- cordova-plugin-qrscanner : **扫描操作**
 
 ## 文件结构解释
 
@@ -23,6 +24,7 @@
     - battery   *电池*
     - browser   *网页*
     - device   *设备*
+    - scanner   *扫描*
 
 ## 测试
 
