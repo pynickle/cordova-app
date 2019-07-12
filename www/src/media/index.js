@@ -20,16 +20,44 @@ var app = {
 app.initialize();
 
 document.getElementById("playMedia").addEventListener("click", playMedia);
+document.getElementById("recordMedia").addEventListener("click", recordMedia)
+
+
+function sleep(delay) {
+    var start = (new Date()).getTime();
+    while ((new Date()).getTime() - start < delay) {
+        continue;
+    }
+}
 
 function playMedia() {
-    var url = "https://www.runoob.com/try/demo_source/horse.mp3";
+    var url="https://www.runoob.com/try/demo_source/horse.mp3";
     var media = new Media(url,
         function () {
-            alert("playAudio():Audio Success");
+            alert("成功播放");
         },
         function (err) {
-            alert("playAudio():Audio Error: " + err);
+            alert("错误：" + err);
         }
     );
     media.play();
+}
+
+function recordMedia() {
+    var src = "record.mp3";
+    var media = new Media(src,
+        function () {
+            alert("开始录制");
+        },
+
+        function (err) {
+            alert("错误：" + err.code);
+        });
+
+    media.startRecord();
+    setTimeout(function() {
+        media.stopRecord();
+        alert("录制完成")
+    }, 10000);
+    media.play()
 }
