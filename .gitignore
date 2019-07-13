@@ -5,4 +5,5 @@ hooks/
 package-lock.json
 typings/
 *.apk
+*.bat
 !app.apk
