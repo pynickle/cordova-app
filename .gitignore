@@ -4,4 +4,5 @@ plugins/
 hooks/
 package-lock.json
 typings/
-!*.apk
+*.apk
+!app.apk
