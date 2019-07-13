@@ -1,0 +1,70 @@
+.skillbar {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    position: relative;
+    display: block;
+    overflow: hidden;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+.skillbar.html .title {
+    background-color: #c96300
+}
+
+.skillbar.html .filled {
+    background-color: #ff8817
+}
+
+.skillbar.css .title {
+    background-color: #0f5487
+}
+
+.skillbar.css .filled {
+    background-color: #177fcb
+}
+
+.skillbar.js .title {
+    background-color: #f0b109
+}
+
+.skillbar.js .filled {
+    background-color: #f8ca4d
+}
+
+.skillbar .title {
+    background-color: rgba(0, 0, 0, .6);
+    height: 30px;
+    width: 85px;
+    text-align: center;
+    left: 0;
+    color: #f0f0f0;
+    border-radius: 5px 0 0 5px
+}
+
+.skillbar .percent,
+.skillbar .title {
+    padding: 5px;
+    position: absolute;
+    top: 0;
+    z-index: 9
+}
+
+.skillbar .percent {
+    right: 0;
+    color: #000;
+    font-weight: 700
+}
+
+.skillbar .filled {
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 80, 80, .3);
+    height: 100%;
+    width: 20px;
+    border-radius: 5px 0 0 5px
+}
