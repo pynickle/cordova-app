@@ -25,6 +25,7 @@
     - browser   *网页*
     - device   *设备*
     - scanner   *扫描*
+    - beautiful   *特效*
 
 ## 测试
 
@@ -32,7 +33,7 @@ build这个项目：
 
 ```
 npm test
-// equal to
+// 等同于
 cordova build android
 ```
 
@@ -40,7 +41,7 @@ run这个项目：
 
 ```
 npm start
-// equal to
+// 等同于
 cordova run android
 ```
 
